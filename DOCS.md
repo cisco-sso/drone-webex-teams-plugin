@@ -22,9 +22,10 @@ The following is a sample configuration in your .drone.yml file:
 ```yaml
 pipeline:
   notify spark:
-    image: containers.cisco.com/servicescf-devops/drone-webex-team
+    image: ciscosso/drone-webex-team
     pull: true
     room: "Cisco WebEx Bot Test"
+    access_token: "<mention WebEx Team bot's access token>"
     when:
       status: [ changed, failure, success ]
 ```
